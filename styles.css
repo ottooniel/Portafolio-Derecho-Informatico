@@ -1,27 +1,30 @@
-/* ============================================================
-   VARIABLES
-   ============================================================ */
+/*Variables*/
 :root {
-    --orange:     #FF8400;
+    --orange: #FF8400;
     --vista-bleu: #8FA0D8;
-    --amande:     #F9DFC6;
-    --oxford:     #0B0829;
+    --amande: #F9DFC6;
+    --oxford: #0B0829;
     --oxford-mid: #1a0f4a;
-    --white:      #ffffff;
-    --text-body:  #3a3a5c;
-    --card-bg:    #ffffff;
-    --shadow-sm:  0 2px 12px rgba(11,8,41,0.07);
-    --shadow-md:  0 6px 24px rgba(11,8,41,0.13);
-    --radius:     10px;
-    --t:          0.3s ease;
+    --white: #ffffff;
+    --text-body: #3a3a5c;
+    --card-bg: #ffffff;
+    --shadow-sm: 0 2px 12px rgba(11, 8, 41, 0.07);
+    --shadow-md: 0 6px 24px rgba(11, 8, 41, 0.13);
+    --radius: 10px;
+    --t: 0.3s ease;
 }
 
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -30,15 +33,15 @@ body {
     line-height: 1.65;
 }
 
-/* ============================================================
-   NAVBAR
-   ============================================================ */
+/* NAVBAR */
 .navbar {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     background: var(--oxford);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.35);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
 }
 
 .nav-container {
@@ -105,9 +108,7 @@ body {
     line-height: 1;
 }
 
-/* ============================================================
-   HERO / PORTADA
-   ============================================================ */
+/* HERO / PORTADA */
 .hero {
     min-height: 100vh;
     background: var(--oxford);
@@ -122,9 +123,11 @@ body {
 .hero::before {
     content: '';
     position: absolute;
-    top: -250px; right: -200px;
-    width: 650px; height: 650px;
-    background: radial-gradient(circle, rgba(143,160,216,0.12) 0%, transparent 68%);
+    top: -250px;
+    right: -200px;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(143, 160, 216, 0.12) 0%, transparent 68%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -132,9 +135,11 @@ body {
 .hero::after {
     content: '';
     position: absolute;
-    bottom: -120px; left: -120px;
-    width: 450px; height: 450px;
-    background: radial-gradient(circle, rgba(255,132,0,0.09) 0%, transparent 65%);
+    bottom: -120px;
+    left: -120px;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(255, 132, 0, 0.09) 0%, transparent 65%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -149,7 +154,9 @@ body {
     z-index: 1;
 }
 
-.hero-logo-wrap { flex-shrink: 0; }
+.hero-logo-wrap {
+    flex-shrink: 0;
+}
 
 .hero-logo {
     width: 200px;
@@ -157,7 +164,9 @@ body {
     object-fit: contain;
 }
 
-.hero-text { flex: 1; }
+.hero-text {
+    flex: 1;
+}
 
 .hero-uni {
     color: var(--vista-bleu);
@@ -183,7 +192,9 @@ body {
     margin-bottom: 0.6rem;
 }
 
-.hero-title span { color: var(--orange); }
+.hero-title span {
+    color: var(--orange);
+}
 
 .hero-divider {
     width: 56px;
@@ -224,23 +235,31 @@ body {
     font-size: 0.92rem;
     letter-spacing: 0.02em;
     transition: var(--t);
-    box-shadow: 0 4px 20px rgba(255,132,0,0.35);
+    box-shadow: 0 4px 20px rgba(255, 132, 0, 0.35);
 }
 
 .btn-hero:hover {
     background: #e67600;
     transform: translateY(-2px);
-    box-shadow: 0 6px 28px rgba(255,132,0,0.5);
+    box-shadow: 0 6px 28px rgba(255, 132, 0, 0.5);
 }
 
-/* ============================================================
-   SECTIONS COMMON
-   ============================================================ */
-.section { padding: 5rem 1.5rem; }
+/* SECTIONS COMMON */
+.section {
+    padding: 5rem 1.5rem;
+}
 
-.section-light { background: var(--amande); }
-.section-dark  { background: var(--oxford); }
-.section-close { background: linear-gradient(150deg, var(--oxford) 0%, var(--oxford-mid) 100%); }
+.section-light {
+    background: var(--amande);
+}
+
+.section-dark {
+    background: var(--oxford);
+}
+
+.section-close {
+    background: linear-gradient(150deg, var(--oxford) 0%, var(--oxford-mid) 100%);
+}
 
 .container {
     max-width: 1200px;
@@ -273,9 +292,14 @@ body {
     margin-bottom: 0.7rem;
 }
 
-.section-dark  .section-title,
-.section-close .section-title { color: var(--white); }
-.section-light .section-title  { color: var(--oxford); }
+.section-dark .section-title,
+.section-close .section-title {
+    color: var(--white);
+}
+
+.section-light .section-title {
+    color: var(--oxford);
+}
 
 .section-subtitle {
     font-size: 0.97rem;
@@ -284,12 +308,19 @@ body {
     margin: 0 auto;
 }
 
-.section-dark  .section-subtitle,
-.section-close .section-subtitle { color: var(--amande); }
-.section-light .section-subtitle  { color: var(--oxford); }
+.section-dark .section-subtitle,
+.section-close .section-subtitle {
+    color: var(--amande);
+}
+
+.section-light .section-subtitle {
+    color: var(--oxford);
+}
 
 /* TOPIC BLOCK */
-.topic-block { margin-bottom: 3.5rem; }
+.topic-block {
+    margin-bottom: 3.5rem;
+}
 
 .topic-title {
     font-size: 1.22rem;
@@ -300,12 +331,15 @@ body {
     line-height: 1.3;
 }
 
-.section-dark  .topic-title { color: var(--amande); }
-.section-light .topic-title { color: var(--oxford); }
+.section-dark .topic-title {
+    color: var(--amande);
+}
 
-/* ============================================================
-   CARD GRID
-   ============================================================ */
+.section-light .topic-title {
+    color: var(--oxford);
+}
+
+/* CARD GRID */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -347,13 +381,13 @@ body {
 
 /* DARK SECTION CARDS */
 .section-dark .card {
-    background: rgba(255,255,255,0.055);
+    background: rgba(255, 255, 255, 0.055);
     border-top-color: var(--vista-bleu);
     box-shadow: none;
 }
 
 .section-dark .card:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-top-color: var(--orange);
     box-shadow: none;
 }
@@ -371,7 +405,7 @@ body {
 }
 
 .section-dark .card-highlight {
-    background: rgba(255,132,0,0.07);
+    background: rgba(255, 132, 0, 0.07);
     border-top-color: var(--orange);
 }
 
@@ -390,7 +424,9 @@ body {
     line-height: 1.5;
 }
 
-.section-dark .card-list li { color: var(--amande); }
+.section-dark .card-list li {
+    color: var(--amande);
+}
 
 .card-list li::before {
     content: '›';
@@ -425,9 +461,7 @@ body {
     color: var(--oxford);
 }
 
-/* ============================================================
-   INTRODUCCIÓN
-   ============================================================ */
+/* INTRODUCCIÓN */
 .intro-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -499,9 +533,7 @@ body {
     color: var(--amande);
 }
 
-/* ============================================================
-   BLOCKQUOTE / INTRO-CARD-WIDE
-   ============================================================ */
+/* BLOCKQUOTE / INTRO-CARD-WIDE */
 .intro-card-wide {
     margin-bottom: 1.5rem;
 }
@@ -515,26 +547,24 @@ body {
     line-height: 1.7;
 }
 
-.section-dark  .intro-card-wide blockquote {
-    background: rgba(255,132,0,0.07);
+.section-dark .intro-card-wide blockquote {
+    background: rgba(255, 132, 0, 0.07);
     color: var(--amande);
 }
 
 .section-light .intro-card-wide blockquote {
-    background: rgba(11,8,41,0.05);
+    background: rgba(11, 8, 41, 0.05);
     color: var(--oxford);
     border-left-color: var(--oxford);
 }
 
-/* ============================================================
-   CRISIS BANNER
-   ============================================================ */
+/* CRISIS BANNER */
 .crisis-banner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    background: rgba(255,132,0,0.09);
-    border: 1px solid rgba(255,132,0,0.28);
+    background: rgba(255, 132, 0, 0.09);
+    border: 1px solid rgba(255, 132, 0, 0.28);
     border-radius: var(--radius);
     padding: 2rem 1.5rem;
     margin-bottom: 2rem;
@@ -557,15 +587,15 @@ body {
     line-height: 1.4;
 }
 
-/* ============================================================
-   CIERRE
-   ============================================================ */
+/* CIERRE */
 .closing-content {
     max-width: 840px;
     margin: 0 auto;
 }
 
-.reflection-block { margin-bottom: 3rem; }
+.reflection-block {
+    margin-bottom: 3rem;
+}
 
 .reflection-block h3 {
     font-size: 1.4rem;
@@ -584,7 +614,7 @@ body {
 .reflection-item {
     display: flex;
     gap: 1.5rem;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-left: 3px solid var(--orange);
     border-radius: var(--radius);
     padding: 1.4rem 1.5rem;
@@ -592,7 +622,7 @@ body {
 }
 
 .reflection-item:hover {
-    background: rgba(255,255,255,0.09);
+    background: rgba(255, 255, 255, 0.09);
 }
 
 .r-num {
@@ -614,7 +644,7 @@ body {
 
 .r-text p {
     font-size: 0.88rem;
-    color: rgba(249,223,198,0.78);
+    color: rgba(249, 223, 198, 0.78);
     line-height: 1.65;
 }
 
@@ -638,8 +668,8 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(143,160,216,0.2);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(143, 160, 216, 0.2);
     border-radius: var(--radius);
     padding: 2rem;
 }
@@ -672,35 +702,61 @@ body {
 
 .sig-uni {
     font-size: 0.8rem;
-    color: rgba(249,223,198,0.55);
+    color: rgba(249, 223, 198, 0.55);
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* FOOTER */
 .footer {
     background: #050215;
-    color: rgba(249,223,198,0.45);
+    color: rgba(249, 223, 198, 0.45);
     text-align: center;
     padding: 1.35rem;
     font-size: 0.8rem;
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-logo {
+        width: 170px;
+        height: 170px;
+    }
+
+    .hero-content {
+        gap: 3rem;
+    }
+
+    .section {
+        padding: 4.5rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.95rem;
+    }
+}
+
+/* Tablet / teléfono grande (≤ 860px) */
 @media (max-width: 860px) {
-    .nav-links { display: none; }
+
+    /* nav */
+    .nav-links {
+        display: none;
+    }
 
     .nav-links.open {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 62px; left: 0; right: 0;
+        top: 62px;
+        left: 0;
+        right: 0;
         background: var(--oxford);
         padding: 0.75rem 1rem;
         gap: 0.2rem;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
     .nav-links.open .nav-link {
@@ -708,23 +764,70 @@ body {
         padding: 0.6rem 0.85rem;
     }
 
-    .nav-toggle { display: block; }
+    .nav-toggle {
+        display: block;
+    }
 
+    /* hero */
     .hero-content {
         flex-direction: column;
         text-align: center;
-        gap: 2rem;
+        gap: 1.75rem;
     }
 
-    .hero-logo { width: 140px; height: 140px; }
-    .hero-title { font-size: 2.1rem; }
-    .hero-divider { margin: 1rem auto; }
+    .hero-logo {
+        width: 140px;
+        height: 140px;
+    }
 
-    .crisis-banner { grid-template-columns: 1fr; }
+    .hero-title {
+        font-size: 2.1rem;
+    }
 
+    .hero-divider {
+        margin: 1rem auto;
+    }
+
+    /* sections */
+    .section {
+        padding: 4rem 1.25rem;
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .topic-title {
+        font-size: 1.1rem;
+    }
+
+    .topic-block {
+        margin-bottom: 2.5rem;
+    }
+
+    /* course info: 2 columnas en tablet */
+    .course-info {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.75rem;
+    }
+
+    /* crisis */
+    .crisis-banner {
+        grid-template-columns: 1fr;
+    }
+
+    /* cierre */
     .closing-signature {
         flex-direction: column;
         text-align: center;
+    }
+
+    .closing-quote {
+        font-size: 1.1rem;
     }
 
     .reflection-item {
@@ -732,14 +835,136 @@ body {
         gap: 0.6rem;
     }
 
-    .r-num { font-size: 1.4rem; }
+    .r-num {
+        font-size: 1.4rem;
+    }
 }
 
+/* Teléfono (≤ 540px) */
 @media (max-width: 540px) {
-    .hero-title { font-size: 1.75rem; }
-    .section-title { font-size: 1.65rem; }
-    .cards-grid { grid-template-columns: 1fr; }
-    .cards-grid-2 { grid-template-columns: 1fr; }
-    .course-info { padding: 1.5rem; }
-    .nav-brand span { display: none; }
+
+    /* nav */
+    .nav-brand span {
+        display: none;
+    }
+
+    /* hero */
+    .hero {
+        padding: 5rem 1.25rem 3.5rem;
+    }
+
+    .hero-logo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .btn-hero {
+        display: block;
+        text-align: center;
+    }
+
+    /* sections */
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-tag {
+        font-size: 0.7rem;
+    }
+
+    .section-title {
+        font-size: 1.65rem;
+    }
+
+    .topic-block {
+        margin-bottom: 2rem;
+    }
+
+    /* grids a 1 columna */
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* course info */
+    .course-info {
+        grid-template-columns: 1fr;
+        padding: 1.25rem;
+    }
+
+    .intro-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    /* cards */
+    .card {
+        padding: 1.2rem 1.25rem;
+    }
+
+    /* crisis */
+    .crisis-banner {
+        padding: 1.5rem 1rem;
+    }
+
+    .crisis-num {
+        font-size: 1.8rem;
+    }
+
+    /* cierre */
+    .closing-quote {
+        font-size: 1rem;
+    }
+
+    .closing-signature {
+        padding: 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .closing-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Teléfono muy pequeño (≤ 380px) */
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .section {
+        padding: 2.5rem 0.875rem;
+    }
+
+    .section-title {
+        font-size: 1.45rem;
+    }
+
+    .crisis-num {
+        font-size: 1.5rem;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+    }
 }
