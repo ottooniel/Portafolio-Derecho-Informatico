@@ -714,6 +714,117 @@ body {
     font-size: 0.8rem;
 }
 
+/* ACTIVIDADES */
+.activities-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.activity-card {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    border-left: 3px solid var(--vista-bleu);
+    transition: background var(--t);
+}
+
+.section-dark .activity-card {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.section-dark .activity-card:hover {
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.section-light .activity-card {
+    background: rgba(11, 8, 41, 0.04);
+    border-left-color: var(--orange);
+}
+
+.section-light .activity-card:hover {
+    background: rgba(11, 8, 41, 0.08);
+}
+
+.activity-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    line-height: 1.3;
+}
+
+.activity-body h4 {
+    font-size: 0.94rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.section-dark .activity-body h4 {
+    color: var(--amande);
+}
+
+.section-light .activity-body h4 {
+    color: var(--oxford);
+}
+
+.activity-body p {
+    font-size: 0.86rem;
+    line-height: 1.6;
+}
+
+.section-dark .activity-body p {
+    color: rgba(249, 223, 198, 0.78);
+}
+
+.section-light .activity-body p {
+    color: var(--text-body);
+}
+
+/* RECURSOS */
+.resources-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+
+.resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 1rem;
+    border-radius: 20px;
+    font-size: 0.81rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--t);
+    border: 1px solid transparent;
+}
+
+.section-dark .resource-link {
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--amande);
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+.section-dark .resource-link:hover {
+    background: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+}
+
+.section-light .resource-link {
+    background: rgba(11, 8, 41, 0.06);
+    color: var(--oxford);
+    border-color: rgba(11, 8, 41, 0.15);
+}
+
+.section-light .resource-link:hover {
+    background: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+}
+
 /* RESPONSIVE */
 @media (max-width: 1100px) {
     .hero-title {
